@@ -28,14 +28,15 @@ class Onebox::Engine::BilibiliOnebox
   def to_html
     <<-HTML
       <iframe 
-        src='https://player.bilibili.com/player.html?#{video_id}&page=1' 
-        scrolling="no" 
-        border="0" 
-        frameborder="no" 
-        framespacing="0" 
-        width='640' 
-        height='430' 
-        allowfullscreen='true'></iframe>
+        src='//player.bilibili.com/player.html?#{video_id}&page=1&autoplay=0&high_quality=1&danmaku=0'
+        scrolling='no'
+        border="0"
+        frameborder="0"
+        framespacing="0"
+        allowfullscreen="true"
+        width='480'
+        height='300'
+        sandbox='allow-top-navigation allow-same-origin allow-forms allow-scripts'></iframe>
     HTML
   end
 
