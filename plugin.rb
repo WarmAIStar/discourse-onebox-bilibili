@@ -19,7 +19,7 @@ class Onebox::Engine::BilibiliOnebox
     return "aid=#{match[1]}" if match && match[1]
     match = uri.path.match(/\/video\/BV([a-zA-Z0-9]+)(\.html)?.*/)
     return "bvid=#{match[1]}" if match && match[1]
-      
+
     nil
   rescue
     return nil
@@ -34,8 +34,6 @@ class Onebox::Engine::BilibiliOnebox
         frameborder="0"
         framespacing="0"
         allowfullscreen="true"
-        width='480'
-        height='300'
         sandbox='allow-top-navigation allow-same-origin allow-forms allow-scripts'></iframe>
     HTML
   end
